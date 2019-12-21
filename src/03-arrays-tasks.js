@@ -35,12 +35,8 @@ function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(len) {
-  const arr = [];
-  for (let i = 1; i <= len * 2; i += 1) {
-    arr.push(i);
-  }
-  return arr.filter((item) => ((item % 2)));
+function generateOdds(/* len */) {
+  throw new Error('Not implemented');
 }
 
 
@@ -279,14 +275,8 @@ function getSecondItems(arr) {
  *  [ 'a', 'b', 'c', null ] => [ 'a', 'b','b', 'c','c','c',  null,null,null,null ]
  *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
  */
-function propagateItemsByPositionIndex(arr) {
-  const result = [];
-  for (let i = 0; i < arr.length; i += 1) {
-    for (let j = 0; j <= i; j += 1) {
-      result.push(arr[i]);
-    }
-  }
-  return result;
+function propagateItemsByPositionIndex(/* arr */) {
+  throw new Error('Not implemented');
 }
 
 
@@ -495,19 +485,8 @@ function sortCitiesArray(arr) {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-function getIdentityMatrix(n) {
-  const result = [];
-  result.length = n;
-  result.fill([]);
-  for (let i = 0; i < n; i += 1) {
-    for (let j = 0; j < n; j += 1) {
-      result[i].length = n;
-      if (i === j) {
-        result[i][j] = 1;
-      } else { result[i][j] = 0; }
-    }
-  }
-  return result;
+function getIdentityMatrix(/* n */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -523,14 +502,8 @@ function getIdentityMatrix(n) {
  *     0, 100 => [ 0, 1, 2, ..., 100 ]
  *     3, 3   => [ 3 ]
  */
-function getIntervalArray(start, end) {
-  const result = [];
-  let counter = start;
-  while (counter <= end) {
-    result.push(counter);
-    counter += 1;
-  }
-  return result;
+function getIntervalArray(/* start, end */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -544,14 +517,8 @@ function getIntervalArray(start, end) {
  *   [ 'a', 'a', 'a', 'a' ]  => [ 'a' ]
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
-function distinct(arr) {
-  const result = [];
-  for (let i = 0; i < arr.length; i += 1) {
-    if (!(result.includes(arr[i]))) {
-      result.push(arr[i]);
-    }
-  }
-  return result;
+function distinct(/* arr */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -602,8 +569,8 @@ function group(/* array, keySelector, valueSelector */) {
  *   [[1, 2], [3, 4], [5, 6]], (x) => x     =>   [ 1, 2, 3, 4, 5, 6 ]
  *   ['one','two','three'], x=>x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
-function selectMany(arr, childrenSelector) {
-  return arr.map((item) => item.map(childrenSelector));
+function selectMany(/* arr, childrenSelector */) {
+  throw new Error('Not implemented');
 }
 
 
