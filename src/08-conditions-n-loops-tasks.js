@@ -251,7 +251,7 @@ function reverseString(str) {
  * Reverse the specified integer number (put all digits in reverse order)
  *
  * @param {number} num
- * @return {number}
+ * @return {string}
  *
  * @example:
  *   12345 => 54321
