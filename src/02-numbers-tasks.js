@@ -44,7 +44,7 @@ function getCicleCircumference(radius) {
  *
  * @param {numder} value1
  * @param {number} value2
- * @return {bigint}
+ * @return {number}
  *
  * @example:
  *   5, 5  => 5
@@ -52,7 +52,11 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (BigInt(value1) + BigInt(value2)) / BigInt(2);
+  const sum = value1 + value2;
+  if (sum >= Number.MAX_VALUE) {
+    return Number.MAX_VALUE;
+  }
+  return (value1 + value2) / 2;
 }
 
 /**

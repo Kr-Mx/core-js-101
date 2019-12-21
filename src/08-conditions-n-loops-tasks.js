@@ -53,13 +53,8 @@ function getFizzBuzz(num) {
  *   5  => 120
  *   10 => 3628800
  */
-function getFactorial(n) {
-  let result = n;
-  while (n !== 1) {
-    result *= n - 1;
-    n -= 1;
-  }
-  return result;
+function getFactorial(/* n */) {
+  throw new Error('Not implemented');
 }
 
 
@@ -75,13 +70,8 @@ function getFactorial(n) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(n1, n2) {
-  let result = n2;
-  while (n2 !== n1) {
-    result += n2 - 1;
-    n2 -= 1;
-  }
-  return result;
+function getSumBetweenNumbers(/* n1, n2 */) {
+  throw new Error('Not implemented');
 }
 
 
@@ -186,10 +176,11 @@ function isInsideCircle(/* circle, point */) {
  */
 function findFirstSingleChar(str) {
   for (let i = 0; i < str.length; i += 1) {
-    if (str.indexOf(str[i]) === str.lastIndexOf(str[i])){
+    if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
       return str[i];
     }
   }
+  return this;
 }
 
 
@@ -218,8 +209,16 @@ function findFirstSingleChar(str) {
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
   let start;
   let end;
-  (isStartIncluded === true) ? start = '[' : start = '(';
-  (isEndIncluded === true) ? end = ']' : end = ')';
+  if (isStartIncluded === true) {
+    start = '[';
+  } else {
+    start = '(';
+  }
+  if (isEndIncluded === true) {
+    start = ']';
+  } else {
+    start = ')';
+  }
   if (a > b) {
     return `${start}${b}, ${a}${end}`;
   }
@@ -241,7 +240,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  */
 function reverseString(str) {
   const result = [];
-  for (let i = str.length - 1; i >= 0; i -= 1){
+  for (let i = str.length - 1; i >= 0; i -= 1) {
     result.push(str[i]);
   }
   return result.join('');

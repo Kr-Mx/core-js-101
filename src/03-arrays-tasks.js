@@ -203,17 +203,8 @@ function getTail(arr, n) {
  *    +'20,21,22,23,24\n'
  *    +'30,31,32,33,34'
  */
-function toCsvText(arr) {
-  const result = [];
-  for (let i = 0; i < arr.length; i += 1) {
-    if (i === arr.length - 1) {
-      result.push(arr[i].join(','));
-    } else {
-      arr[i][arr[i].length - 1] = `${arr[i][arr[i].length - 1]}\n`;
-      result.push(arr[i].join(','));
-    }
-  }
-  return result.join('');
+function toCsvText(/* arr */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -312,10 +303,8 @@ function propagateItemsByPositionIndex(arr) {
  *   [ 1,2,3,4,5,6,7,8,9,10 ] => [ 10, 9, 8 ]
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
-function get3TopItems(arr) {
-  arr.sort((a, b) => b - a);
-  arr.length = 3;
-  return arr;
+function get3TopItems(/* arr */) {
+  throw new Error('Not implemented');
 }
 
 
